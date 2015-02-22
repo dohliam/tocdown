@@ -53,7 +53,7 @@ File.open(file_name, 'r') do |f|
 
 
     if options[:markdown] == true
-      href = title.gsub(" ", "-").downcase
+      href = title.gsub(" ", "-").gsub("\.", "").downcase
       if options[:bullets] == true
         puts indent + "* [#{title}](\##{href})"
       else

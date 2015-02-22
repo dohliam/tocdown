@@ -2,10 +2,10 @@ tocdown is a general purpose table of contents generator that takes markdown as 
 
 * [1 Rationale](#rationale)
 * [2 Usage](#usage)
-  * [2.1 toc.rb](#toc.rb)
+  * [2.1 toc.rb](#tocrb)
     * [2.1.1 Options](#options)
-    * [2.1.2 test.md](#test.md)
-  * [2.2 toc.js](#toc.js)
+    * [2.1.2 test.md](#testmd)
+  * [2.2 toc.js](#tocjs)
 * [3 To do](#to-do)
 * [4 License](#license)
 

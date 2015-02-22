@@ -42,7 +42,7 @@ function md2Toc() {
       }
 
       if (options.markdown.checked) {
-        var href = title.replace(/ /g, "-").toLowerCase();
+        var href = title.replace(/ /g, "-").replace(/\./g, "").toLowerCase();
         if (options.bullets.checked) {
           textOut.value = textOut.value + indent + "* [" + title + "](#" + href + ")\n";
         } else {
