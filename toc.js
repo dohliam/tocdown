@@ -63,3 +63,18 @@ function sampleText() {
   var inputBox = document.getElementById("input");
   inputBox.value = txt;
 }
+
+function toBase64() {
+  textOut = document.getElementById("text_output");
+  text = textOut.value.replace(/\n/g,"\\n").replace(/"/g,'\\"');
+  json = '{"source":"' + text + '","defaults":{"html":false,"xhtmlOut":false,"breaks":false,"langPrefix":"language-","linkify":true,"typographer":true,"_highlight":true,"_strict":false,"_view":"html"}}';
+
+// unicode text breaks remarkable's permalink api at the moment, and so does uriencoded ascii
+  if (text.match(/[^ -~]/)) {
+      b64 = window.btoa(encodeURI(json));
+  } else {
+      b64 = window.btoa(json);
+  }
+  url = "https://jonschlinkert.github.io/remarkable/demo/#md64=" + b64;
+  window.location = url;
+}

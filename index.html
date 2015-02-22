@@ -4,30 +4,30 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style></style>
 	<script src="toc.js" type="text/javascript">//</script>
-<!-- 	<script type="text/javascript"></script> -->
 
 <body onload="document.getElementById('input').focus();">
 	<h1>tocdown - A Table of Contents Generator for Markdown</h1>
 
-	<table><tr><td><h2>Input (Markdown)</h2>
-		<div id="input_div">
-			<textarea id="input" rows=15 cols=60>Enter markdown here</textarea>
-		</div>
-	</td><td><h2>Output (Text)</h2>
-		<textarea id="text_output" rows=15 cols=60>Output will appear here</textarea>
-	</td></tr></table>
-	<br><input type="button" onclick="md2Toc()" value="Create ToC">
-	<br><input type="button" onclick="sampleText()" value="Sample text">
-	<form id="options">
-		<input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
-		<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of ordered list<br>
-		<input type="checkbox" onchange="md2Toc()" name="zero" value="true">All for zero heading<br>
-		<input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
-	</form>
-		<div id="output_div" style="display:none">
-			<h2>Output (HTML)</h2>
+	<div id=container style="width:75%">
+		<table style="width:100%"><tr><td style="width:50%"><h2>Input (Markdown)</h2>
+			<div id="input_div">
+				<textarea id="input" rows=15 cols=60 style="width:97%">Enter markdown here</textarea>
+			</div>
+		</td><td style="width:50%"><h2>Output (Text)</h2>
+			<textarea id="text_output" rows=15 cols=60 style="width:97%">Output will appear here</textarea>
+		</td></tr></table>
+		<center><input type="button" onclick="md2Toc()" value="Create ToC"> <input type="button" onclick="sampleText()" value="Sample text"> <input type="button" onclick="toBase64()" value="View TOC in Remarkable"></center>
+		<form id="options">
+			<input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
+			<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of ordered list<br>
+			<input type="checkbox" onchange="md2Toc()" name="zero" value="true">Allow for zero heading<br>
+			<input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
+		</form>
+	</div>
+	<div id="output_div" style="display:none">
+		<h2>Output (HTML)</h2>
 		<div id="html_output">&nbsp;</div>
-		</div>
+	</div>
 </body>
 </head>
 </html>
