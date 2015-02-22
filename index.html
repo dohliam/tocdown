@@ -11,12 +11,12 @@
 	<div id=container style="width:75%">
 		<table style="width:100%"><tr><td style="width:50%"><h2>Input (Markdown)</h2>
 			<div id="input_div">
-				<textarea id="input" rows=15 cols=60 style="width:97%">Enter markdown here</textarea>
+				<textarea id="input" rows=15 cols=60 style="width:97%" accesskey="." title="Shift+Alt+.">Enter markdown here</textarea>
 			</div>
 		</td><td style="width:50%"><h2>Output (Text)</h2>
-			<textarea id="text_output" rows=15 cols=60 style="width:97%">Output will appear here</textarea>
+			<textarea id="text_output" rows=15 cols=60 style="width:97%" accesskey="o" title="Shift+Alt+O">Output will appear here</textarea>
 		</td></tr></table>
-		<center><input type="button" onclick="md2Toc()" value="Create ToC"> <input type="button" onclick="sampleText()" value="Sample text"> <input type="button" onclick="toBase64()" value="View TOC in Remarkable"></center>
+		<center><input type="button" onclick="md2Toc()" accesskey="c" title="Shift+Alt+C" value="Create ToC"> <input type="button" onclick="sampleText()" accesskey="s" title="Shift+Alt+S" value="Sample text"> <input type="button" onclick="toBase64()" accesskey="r" title="Shift+Alt+R" value="View TOC in Remarkable"></center>
 		<form id="options">
 			<input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
 			<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of ordered list<br>
