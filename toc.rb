@@ -7,6 +7,7 @@ OptionParser.new do |opts|
   opts.banner = "Usage: toc.rb [options] [input filename]"
 
   opts.on("-b", "--bullets", "Non-numbered headings") { options[:bullets] = true }
+  opts.on("-d", "--heading-depth DEPTH", "Specify maximum heading depth (from 1 to 6)") { |d| options[:depth] = d }
   opts.on("-i", "--no-indent", "Remove heading indentation") { options[:noindent] = true }
   opts.on("-m", "--markdown", "Output markdown instead of plain text") { options[:markdown] = true }
   opts.on("-z", "--zero", "Allow for zero heading (Chapter 0, e.g. Introduction, Preface etc.)") { options[:zero] = true }
@@ -33,6 +34,16 @@ File.open(file_name, 'r') do |f|
     title = line.gsub("#", "").strip
 
     x = line.count("#")
+    depth = 6
+
+    if options[:depth]
+      d = options[:depth].to_i
+      if d < 6 && d > 0
+        depth = d
+      end
+    end
+
+    next if x > depth
 
     counter[x - 1] += 1
     counter[x..5] = [0] * (6 - x)

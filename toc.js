@@ -20,6 +20,10 @@ function md2Toc() {
     if (hashcheck.test(line)) {
       title = line.replace(/^#+\s+/, "");
       var x = (line.match(/#/g) || []).length;
+
+      depth = options.maxdepth.value;
+
+      if ( x > depth || x < 1) { continue }
       counter[x-1]++;
       for(var a=x;a < counter.length;a++) {
         counter[a] = 0;
@@ -59,7 +63,7 @@ function md2Toc() {
 }
 
 function sampleText() {
-  var txt = "# Top-level topic\n\nLorem ipsum dolor sit amet...\n\n## First sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Second sub-topic\n\nLorem ipsum dolor sit amet...\n\n### First sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Third sub-topic\n\nLorem ipsum dolor sit amet...\n\n### A sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n#### And a sub-sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n# Third top-level topic\n\nLorem ipsum dolor sit amet...\n";
+  var txt = "# Top-level topic\n\nLorem ipsum dolor sit amet...\n\n## First sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Second sub-topic\n\nLorem ipsum dolor sit amet...\n\n### First sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Third sub-topic\n\nLorem ipsum dolor sit amet...\n\n### A sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n#### And a sub-sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n# Second top-level topic\n\nLorem ipsum dolor sit amet...\n";
   var inputBox = document.getElementById("input");
   inputBox.value = txt;
 }
@@ -70,7 +74,7 @@ function toBase64() {
   json = '{"source":"' + text + '","defaults":{"html":false,"xhtmlOut":false,"breaks":false,"langPrefix":"language-","linkify":true,"typographer":true,"_highlight":true,"_strict":false,"_view":"html"}}';
 
 // unicode text breaks remarkable's permalink api at the moment, and so does uriencoded ascii
-  if (text.match(/[^ -~]/)) {
+  if (text.match(/[^ -ÿ]/)) {
       b64 = window.btoa(encodeURI(json));
   } else {
       b64 = window.btoa(json);

@@ -41,13 +41,14 @@ The command-line version of tocdown can be used interactively by executing the c
 
 ### Options
 
-A number of options are available that change the way the output is processed or displayed. A list of all available options can be viewed by using the `--help` or `-h` options:
+A number of options are available that change the way the output is processed or displayed. A list of all available options can be viewed by using the `--help` option:
 
     ruby toc.rb --help
 
 Currently, the following options are available:
 
 * `-b`, --`bullets` (Non-numbered headings)
+* `-d`, --`heading-depth DEPTH` (Specify maximum heading depth [between 1 and 6])
 * `-i`, --`no-indent` (Remove heading indentation)
 * `-m`, --`markdown` (Output markdown instead of plain text)
 * `-z`, --`zero` (Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc.)
@@ -78,19 +79,20 @@ If you specify markdown output with the `-m` option, you will get the following 
       * [1.3 Third sub-topic](#third-sub-topic)
         * [1.3.1 A sub-sub-topic](#a-sub-sub-topic)
           * [1.3.1.1 And a sub-sub-sub-topic](#and-a-sub-sub-sub-topic)
-    * [2 Third top-level topic](#third-top-level-topic)
+    * [2 Seond top-level topic](#third-top-level-topic)
 
 
 ## toc.js
 
 The Javascript version of tocdown, `toc.js` was designed to have the same features and functionality as the command-line version. Since it can be accessed from a webpage it is convenient for one-offs and short documents. The output live updates when configuration options are selected, so it is also useful as a way to see the effect of different options and parameters on a given output.
 
+Once you have generated a table of contents, you can preview the output in [Remarkable](https://jonschlinkert.github.io/remarkable/demo/) by clicking the _View TOC in Remarkable_ button.
+
 A demo of toc.js can be found [here](http://dohliam.github.io/tocdown/).
 
 # To do
 * Replace [TOC] in file with Table of Contents
 * Option to output html
-* Option to specify heading depth to display
 * Add some nice-looking CSS
 
 # License

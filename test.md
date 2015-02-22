@@ -26,6 +26,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, und
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-# Third top-level topic
+# Second top-level topic
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.

@@ -22,6 +22,14 @@
 			<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of ordered list<br>
 			<input type="checkbox" onchange="md2Toc()" name="zero" value="true">Allow for zero heading<br>
 			<input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
+			Maximum heading depth: <select onchange="md2Toc()" name="maxdepth">
+				<option value="6">6</option>
+				<option value="5">5</option>
+				<option value="4">4</option>
+				<option value="3">3</option>
+				<option value="2">2</option>
+				<option value="1">1</option> 
+			</select>
 		</form>
 	</div>
 	<div id="output_div" style="display:none">
