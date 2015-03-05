@@ -9,6 +9,7 @@ OptionParser.new do |opts|
   opts.on("-b", "--bullets", "Non-numbered headings") { options[:bullets] = true }
   opts.on("-d", "--heading-depth DEPTH", "Specify maximum heading depth (from 1 to 6)") { |d| options[:depth] = d }
   opts.on("-i", "--no-indent", "Remove heading indentation") { options[:noindent] = true }
+  opts.on("-l", "--no-links", "Remove links to section headings") { options[:nolinks] = true }
   opts.on("-m", "--markdown", "Output markdown instead of plain text") { options[:markdown] = true }
   opts.on("-z", "--zero", "Allow for zero heading (Chapter 0, e.g. Introduction, Preface etc.)") { options[:zero] = true }
 end.parse!
@@ -62,13 +63,22 @@ File.open(file_name, 'r') do |f|
       indent = " " * (line.count("#") - 1)
     end
 
+    href = title.gsub(" ", "-").gsub(/[\.']/, "").downcase
+
+    if options[:nolinks] == true
+      link_bullets = "* #{title}"
+      link_no_bullets = "* #{print_counter.join(".")} #{title}"
+    else
+      link_bullets = "* [#{title}](\##{href})"
+      link_no_bullets = "* [#{print_counter.join(".")} #{title}](\##{href})"
+    end
+
 
     if options[:markdown] == true
-      href = title.gsub(" ", "-").gsub(/[\.']/, "").downcase
       if options[:bullets] == true
-        puts indent + "* [#{title}](\##{href})"
+        puts indent + link_bullets
       else
-        puts indent + "* [#{print_counter.join(".")} #{title}](\##{href})"
+        puts indent + link_no_bullets
       end
     elsif options[:bullets] == true
       puts indent + "* #{title}"

@@ -47,11 +47,12 @@ A number of options are available that change the way the output is processed or
 
 Currently, the following options are available:
 
-* `-b`, --`bullets` (Non-numbered headings)
-* `-d`, --`heading-depth DEPTH` (Specify maximum heading depth [between 1 and 6])
-* `-i`, --`no-indent` (Remove heading indentation)
-* `-m`, --`markdown` (Output markdown instead of plain text)
-* `-z`, --`zero` (Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc.)
+* `-b`, `--bullets` (Non-numbered headings)
+* `-d`, `--heading-depth DEPTH` (Specify maximum heading depth [between 1 and 6])
+* `-i`, `--no-indent` (Remove heading indentation)
+* `-l`, `--no-links` (Remove links to section headings)
+* `-m`, `--markdown` (Output markdown instead of plain text)
+* `-z`, `--zero` (Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc.)
 
 ### test.md
 

@@ -19,9 +19,10 @@
 		<center><input type="button" onclick="md2Toc()" accesskey="c" title="Shift+Alt+C" value="Create ToC"> <input type="button" onclick="sampleText()" accesskey="s" title="Shift+Alt+S" value="Sample text"> <input type="button" onclick="toBase64()" accesskey="r" title="Shift+Alt+R" value="View TOC in Remarkable"></center>
 		<form id="options">
 			<input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
-			<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of ordered list<br>
+			<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of numbered list<br>
 			<input type="checkbox" onchange="md2Toc()" name="zero" value="true">Allow for zero heading<br>
 			<input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
+			<input type="checkbox" onchange="md2Toc()" name="nolinks" value="true">Remove links to section headings<br>
 			Maximum heading depth: <select onchange="md2Toc()" name="maxdepth">
 				<option value="6">6</option>
 				<option value="5">5</option>

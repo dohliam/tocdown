@@ -45,12 +45,21 @@ function md2Toc() {
         indent = Array(x).join("  ");
       }
 
+      var href = title.replace(/ /g, "-").replace(/[\.']/g, "").toLowerCase();
+
+      if (options.nolinks.checked) {
+        linkBullets = "* " + title + "\n";
+        linkNobullets = "* " + printCounter.join(".") + " " + title + "\n";
+      } else {
+        linkBullets = "* [" + title + "](#" + href + ")\n";
+        linkNobullets = "* [" + printCounter.join(".") + " " + title + "](#" + href + ")\n";
+      }
+
       if (options.markdown.checked) {
-        var href = title.replace(/ /g, "-").replace(/[\.']/g, "").toLowerCase();
         if (options.bullets.checked) {
-          textOut.value = textOut.value + indent + "* [" + title + "](#" + href + ")\n";
+          textOut.value = textOut.value + indent + linkBullets;
         } else {
-          textOut.value = textOut.value + indent + "* [" + printCounter.join(".") + " " + title + "](#" + href + ")\n";
+          textOut.value = textOut.value + indent + linkNobullets;
         }
       } else if (options.bullets.checked) {
         textOut.value = textOut.value + indent + "* " + title + "\n"
