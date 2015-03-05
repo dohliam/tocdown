@@ -54,6 +54,8 @@ Currently, the following options are available:
 * `-m`, `--markdown` (Output markdown instead of plain text)
 * `-z`, `--zero` (Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc.)
 
+Options can be combined arbitrarily, so e.g., `ruby toc.rb -mbi` will produce a table of contents in markdown format with non-numbered headings and no indendation.
+
 ### test.md
 
 If you have downloaded the source package, you can try out tocdown using the provided test.md sample file:
