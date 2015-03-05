@@ -21,6 +21,10 @@ if file_name == nil
   file_name = gets.chomp
 end
 
+if file_name == ""
+  abort("No file specified")
+end
+
 if options[:zero] == true
   counter = [-1]
   counter[1..5] = [0] * (5)
