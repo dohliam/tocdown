@@ -43,3 +43,5 @@ Some tests of ASCII and Unicode
 ### Text with accents: áéñü
 
 ### Chinese 中文、 Cyrillic Русский、 and Korean 한국어
+
+### Düsseldorf, Köln, Москва, 北京市, إسرائيل !@#$
