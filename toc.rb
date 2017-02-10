@@ -67,7 +67,7 @@ File.open(file_name, 'r') do |f|
       indent = " " * (line.count("#") - 1)
     end
 
-    href = title.gsub(" ", "-").gsub(/[\.']/, "").downcase
+    href = title.gsub(" ", "-").gsub(/[\.'@,\!]/, "").downcase
 
     if options[:nolinks] == true
       link_bullets = "* #{title}"
