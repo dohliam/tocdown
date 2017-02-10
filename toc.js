@@ -45,7 +45,7 @@ function md2Toc() {
         indent = Array(x).join("  ");
       }
 
-      var href = title.replace(/ /g, "-").replace(/[\.']/g, "").toLowerCase();
+      var href = title.replace(/ /g, "-").replace(/(?! |-)[\W]/g, "").toLowerCase();
 
       if (options.nolinks.checked) {
         linkBullets = "* " + title + "\n";
