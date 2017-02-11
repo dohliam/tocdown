@@ -34,7 +34,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, und
 
 Some tests of ASCII and Unicode
 
-### Standard ASCII punctuation: !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+### Standard ASCII punctuation: !"#$%&'()*+,./:;<=>?@[\]^_`{|}~
 
 ### “Curly quotes” (‘single curly quotes’)…
 

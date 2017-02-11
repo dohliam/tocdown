@@ -73,7 +73,7 @@ function md2Toc() {
 }
 
 function sampleText() {
-  var txt = "# Top-level topic\n\nLorem ipsum dolor sit amet...\n\n## First sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Second sub-topic\n\nLorem ipsum dolor sit amet...\n\n### First sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Third sub-topic\n\nLorem ipsum dolor sit amet...\n\n### A sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n#### And a sub-sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n# Second top-level topic\n\nLorem ipsum dolor sit amet...\n";
+  var txt = "# Top-level topic\n\nLorem ipsum dolor sit amet...\n\n## First sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Second sub-topic\n\nLorem ipsum dolor sit amet...\n\n### First sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n## Third sub-topic\n\nLorem ipsum dolor sit amet...\n\n### A sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n#### And a sub-sub-sub-topic\n\nLorem ipsum dolor sit amet...\n\n# Second top-level topic\n\nLorem ipsum dolor sit amet...\n\n## Punctuation @tests, etc.!\n\nSome tests of ASCII and Unicode\n\n### Standard ASCII punctuation: !\"#$%&'()*+,./:;<=>?@[\]^_`{|}~\n\n### “Curly quotes” (‘single curly quotes’)…\n\n### « Guillemets »\n\n### Text with accents: áéñü\n\n### Chinese 中文、 Cyrillic Русский、 and Korean 한국어\n\n### Düsseldorf, Köln, Москва, 北京市, إسرائيل !@#$\n";
   var inputBox = document.getElementById("input");
   inputBox.value = txt;
 }
