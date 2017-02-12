@@ -1,42 +1,64 @@
 <html>
-<head>
-	<title>tocdown - A Table of Contents Generator for Markdown</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<style></style>
-	<script src="toc.js" type="text/javascript">//</script>
+  <head>
+    <title>tocdown - A Table of Contents Generator for Markdown</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="toc.js" type="text/javascript">//</script>
+  </head>
 
-<body onload="document.getElementById('input').focus();">
-	<h1>tocdown - A Table of Contents Generator for Markdown</h1>
+  <body onload="document.getElementById('input').focus();">
+    <h1>tocdown</h1>
+    <h2>A Table of Contents Generator for Markdown</h2>
 
-	<div id=container style="width:75%">
-		<table style="width:100%"><tr><td style="width:50%"><h2>Input (Markdown)</h2>
-			<div id="input_div">
-				<textarea id="input" rows=15 cols=60 style="width:97%" accesskey="." title="Shift+Alt+.">Enter markdown here</textarea>
-			</div>
-		</td><td style="width:50%"><h2>Output (Text)</h2>
-			<textarea id="text_output" rows=15 cols=60 style="width:97%" accesskey="o" title="Shift+Alt+O">Output will appear here</textarea>
-		</td></tr></table>
-		<center><input type="button" onclick="md2Toc()" accesskey="c" title="Shift+Alt+C" value="Create ToC"> <input type="button" onclick="sampleText()" accesskey="s" title="Shift+Alt+S" value="Sample text"> <input type="button" onclick="toBase64()" accesskey="r" title="Shift+Alt+R" value="View TOC in Remarkable"></center>
-		<form id="options">
-			<input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
-			<input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of numbered list<br>
-			<input type="checkbox" onchange="md2Toc()" name="zero" value="true">Allow for zero heading<br>
-			<input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
-			<input type="checkbox" onchange="md2Toc()" name="nolinks" value="true">Remove links to section headings<br>
-			Maximum heading depth: <select onchange="md2Toc()" name="maxdepth">
-				<option value="6">6</option>
-				<option value="5">5</option>
-				<option value="4">4</option>
-				<option value="3">3</option>
-				<option value="2">2</option>
-				<option value="1">1</option> 
-			</select>
-		</form>
-	</div>
-	<div id="output_div" style="display:none">
-		<h2>Output (HTML)</h2>
-		<div id="html_output">&nbsp;</div>
-	</div>
-</body>
-</head>
+    <div id=container style="width:75%">
+      <table style="width:100%">
+        <tr>
+          <td style="width:50%">
+            <h3>Input (Markdown)</h3>
+          </td>
+          <td style="width:50%">
+            <h3>Output (Text)</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="input_div">
+              <textarea id="input" rows=15 cols=60 style="width:97%" accesskey="." title="Shift+Alt+.">Enter markdown here</textarea>
+            </div>
+          </td>
+          <td>
+            <div id="output_div">
+              <textarea id="text_output" rows=15 cols=60 style="width:97%" accesskey="o" title="Shift+Alt+O">Output will appear here</textarea>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <center>
+        <div id="button_list">
+          <input type="button" onclick="md2Toc()" accesskey="c" title="Shift+Alt+C" value="Create ToC"> <input type="button" onclick="sampleText()" accesskey="s" title="Shift+Alt+S" value="Sample text"> <input type="button" onclick="toBase64()" accesskey="r" title="Shift+Alt+R" value="View TOC in Remarkable">
+        </div>
+      </center>
+
+      <br>
+
+      <form id="options">
+        <input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
+        <input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of numbered list<br>
+        <input type="checkbox" onchange="md2Toc()" name="zero" value="true">Allow for zero heading<br>
+        <input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
+        <input type="checkbox" onchange="md2Toc()" name="nolinks" value="true">Remove links to section headings<br>
+
+        Maximum heading depth: <select onchange="md2Toc()" name="maxdepth">
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+
+      </form>
+
+    </div>
+  </body>
 </html>
