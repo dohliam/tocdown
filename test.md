@@ -1,32 +1,44 @@
-# Top-level topic
+# Title (Heading 1)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-## First sub-topic
+## Top-level topic (Heading 2)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-## Second sub-topic
+### First sub-topic (Heading 3)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-### First sub-sub-topic
+#### First sub-sub-topic (Heading 4)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-## Third sub-topic
+##### First sub-sub-sub-topic (Heading 5)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-### A sub-sub-topic
+###### First sub-sub-sub-sub-topic (Heading 6)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-#### And a sub-sub-sub-topic
+### Second sub-topic
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
-# Second top-level topic
+### Third sub-topic
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
+
+#### A sub-sub-topic
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
+
+##### And a sub-sub-sub-topic
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
+
+## Second top-level topic
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
