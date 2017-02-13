@@ -1,4 +1,6 @@
-tocdown is a general purpose table of contents generator that takes markdown as input. There is a command-line version written in Ruby and a Javascript version with identical functionality that can be embedded in a website.
+# tocdown - A table of contents generator for markdown
+
+tocdown is a general purpose table of contents generator that takes markdown as input. There is a command-line version written in Ruby and a Javascript version with identical functionality that can be used in a browser.
 
 * [1 Rationale](#rationale)
 * [2 Usage](#usage)
@@ -7,9 +9,10 @@ tocdown is a general purpose table of contents generator that takes markdown as 
     * [2.1.2 test.md](#testmd)
   * [2.2 toc.js](#tocjs)
 * [3 To do](#to-do)
-* [4 License](#license)
+* [4 Credits](#credits)
+* [5 License](#license)
 
-# Rationale
+## Rationale
 
 There are several existing ways to generate a table of contents from a given markdown file, but most of them focus on outputting unordered html lists, and generally lack options for tweaking the output.
 
@@ -29,21 +32,21 @@ It is possible to number the section headings in a document according to ISO 214
 
 tocdown generates ISO 2145-compliant tables of contents by default, though both numbering and indentation can be optionally turned off. Its non-interactive mode is also suitable for command-line piping or as part of a toolchain (for example, to automatically include a table of contents for each file in a directory).
 
-# Usage
+## Usage
 
 tocdown comes in two versions: toc.rb (written in Ruby) and toc.js (written in Javascript), whose feature sets are identical.
 
 ## toc.rb
 
-The command-line version of tocdown can be used interactively by executing the command `ruby toc.rb`, or non-interactively by specifying an input filename as a parameter:
+The command-line version of tocdown can be used interactively by executing the command `./toc.rb`, or non-interactively by specifying an input filename as a parameter:
 
-    ruby toc.rb [options] [filename]
+    ./toc.rb [options] [filename]
 
 ### Options
 
 A number of options are available that change the way the output is processed or displayed. A list of all available options can be viewed by using the `--help` option:
 
-    ruby toc.rb --help
+    ./toc.rb --help
 
 Currently, the following options are available:
 
@@ -54,13 +57,13 @@ Currently, the following options are available:
 * `-m`, `--markdown` (Output markdown instead of plain text)
 * `-z`, `--zero` (Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc.)
 
-Options can be combined arbitrarily, so e.g., `ruby toc.rb -mbi` will produce a table of contents in markdown format with non-numbered headings and no indendation.
+Options can be combined arbitrarily, so e.g., `./toc.rb -mbi` will produce a table of contents in markdown format with non-numbered headings and no indendation.
 
 ### test.md
 
 If you have downloaded the source package, you can try out tocdown using the provided test.md sample file:
 
-    ruby toc.rb test.md
+    ./toc.rb test.md
 
 This will display the following text on standard output:
 
@@ -87,17 +90,20 @@ If you specify markdown output with the `-m` option, you will get the following 
 
 ## toc.js
 
-The Javascript version of tocdown, `toc.js` was designed to have the same features and functionality as the command-line version. Since it can be accessed from a webpage it is convenient for one-offs and short documents. The output live updates when configuration options are selected, so it is also useful as a way to see the effect of different options and parameters on a given output.
+The Javascript version of tocdown, `toc.js` was designed to have the same features and functionality as the command-line version. Since it can be accessed in a browser it is convenient for one-offs and short documents. The output live updates when configuration options are selected, so it is also useful as a way to see the effect of different options and parameters on a given output.
 
 Once you have generated a table of contents, you can preview the output in [Remarkable](https://jonschlinkert.github.io/remarkable/demo/) by clicking the _View TOC in Remarkable_ button.
 
 A demo of toc.js can be found [here](http://dohliam.github.io/tocdown/).
 
-# To do
+## To do
 * Replace [TOC] in file with Table of Contents
 * Option to output html
-* Add some nice-looking CSS
 
-# License
+## Credits
+
+* [mui](https://github.com/muicss/mui) CSS by @amorey ([MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt)), prototyped using [dropin-minimal-css](https://github.com/dohliam/dropin-minimal-css)
+
+## License
 
 MIT -- see LICENSE file for details.
