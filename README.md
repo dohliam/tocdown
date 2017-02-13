@@ -10,6 +10,7 @@ Tocdown is a general purpose table of contents (TOC) generator that takes markdo
     * [2.2.2 test.md](#testmd)
   * [2.3 toclib.rb](#toclibrb)
   * [2.4 toc.js](#tocjs)
+    * [2.4.1 Shortcut keys](#shortcut-keys)
 * [3 To do](#to-do)
 * [4 Credits](#credits)
 * [5 License](#license)
@@ -134,6 +135,28 @@ The Javascript version of tocdown, `toc.js` was designed to have the same featur
 Once you have generated a table of contents, you can preview the output in [Remarkable](https://jonschlinkert.github.io/remarkable/demo/) by clicking the _View TOC in Remarkable_ button.
 
 A fully functioning demo of toc.js can be found [here](http://dohliam.github.io/tocdown/).
+
+#### Shortcut keys
+
+The input and output boxes can be accessed using keyboard shortcut keys (access keys) for convenience:
+
+* Shortcut modifier key + `.`: **Focus input textarea**
+* Shortcut modifier key + `o`: **Focus output textarea**
+
+The modifier keys you need to press will differ depending on which browser and operating system you are using. See [here](https://github.com/dohliam/xsampa#access-keys) for a list of common access keys for different browsers.
+
+All of the options in toc.js are also accessible using access keys:
+
+* Shortcut modifier key + `b`: **Output bulleted list instead of numbered list**
+* Shortcut modifier key + `c`: **Create TOC**
+* Shortcut modifier key + `d`: **Maximum heading depth selector**
+* Shortcut modifier key + `i`: **Remove heading indentation**
+* Shortcut modifier key + `l`: **Remove links to section headings**
+* Shortcut modifier key + `m`: **Output markdown**
+* Shortcut modifier key + `r`: **View TOC in Remarkable**
+* Shortcut modifier key + `s`: **Sample text**
+* Shortcut modifier key + `t`: **Include top-level heading (Heading 1 / Title)**
+* Shortcut modifier key + `z`: **Allow for zero-level heading**
 
 ## To do
 * Replace [TOC] in file with Table of Contents

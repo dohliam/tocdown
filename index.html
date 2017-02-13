@@ -32,7 +32,7 @@
           </td>
           <td>
             <div id="output_div">
-              <textarea id="text_output" rows=15 cols=60 style="width:97%" accesskey="o" title="Shift+Alt+O">Output will appear here</textarea>
+              <textarea id="text_output" rows=15 cols=60 style="width:97%" accesskey="o">Output will appear here</textarea>
             </div>
           </td>
         </tr>
@@ -40,21 +40,21 @@
 
       <center>
         <div id="button_list">
-          <input type="button" onclick="md2Toc()" accesskey="c" title="Shift+Alt+C" value="Create ToC"> <input type="button" onclick="sampleText()" accesskey="s" title="Shift+Alt+S" value="Sample text"> <input type="button" onclick="toBase64()" accesskey="r" title="Shift+Alt+R" value="View TOC in Remarkable">
+          <input type="button" onclick="md2Toc()" accesskey="c" value="Create TOC"> <input type="button" onclick="sampleText()" accesskey="s" value="Sample text"> <input type="button" onclick="toBase64()" accesskey="r" value="View TOC in Remarkable">
         </div>
       </center>
 
       <br>
 
       <form id="options">
-        <input type="checkbox" onchange="md2Toc()" name="markdown" value="true">Output markdown<br>
-        <input type="checkbox" onchange="md2Toc()" name="bullets" value="true">Output bulleted list instead of numbered list<br>
-        <input type="checkbox" onchange="md2Toc()" name="zero" value="true">Allow for zero-level heading<br>
-        <input type="checkbox" onchange="md2Toc()" name="toplevel" value="true">Include Heading 1 (Title)<br>
-        <input type="checkbox" onchange="md2Toc()" name="noindent" value="true">Remove heading indentation<br>
-        <input type="checkbox" onchange="md2Toc()" name="nolinks" value="true">Remove links to section headings<br>
+        <input type="checkbox" onchange="md2Toc()" name="markdown" value="true" accesskey="m">Output markdown<br>
+        <input type="checkbox" onchange="md2Toc()" name="bullets" value="true" accesskey="b">Output bulleted list instead of numbered list<br>
+        <input type="checkbox" onchange="md2Toc()" name="zero" value="true" accesskey="z">Allow for zero-level heading<br>
+        <input type="checkbox" onchange="md2Toc()" name="toplevel" value="true" accesskey="t">Include top-level heading (Heading 1 / Title)<br>
+        <input type="checkbox" onchange="md2Toc()" name="noindent" value="true" accesskey="i">Remove heading indentation<br>
+        <input type="checkbox" onchange="md2Toc()" name="nolinks" value="true" accesskey="l">Remove links to section headings<br>
 
-        Maximum heading depth: <select onchange="md2Toc()" name="maxdepth">
+        Maximum heading depth: <select onchange="md2Toc()" name="maxdepth" accesskey="d">
           <option value="6">6</option>
           <option value="5">5</option>
           <option value="4">4</option>
