@@ -17,7 +17,7 @@ function md2Toc() {
     var title = "";
     if (hashcheck.test(line)) {
       title = line.replace(/^#+\s+/, "");
-      var x = (line.match(/#/g) || []).length;
+      var x = (line.match(/^#+/) || [null])[0].length -1;
 
       depth = options.maxdepth.value;
 
