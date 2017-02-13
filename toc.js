@@ -19,6 +19,10 @@ function md2Toc() {
       title = line.replace(/^#+\s+/, "");
       var x = (line.match(/^#+/) || [null])[0].length -1;
 
+      if (options.toplevel.checked) {
+        var x = (line.match(/^#+/) || [null])[0].length;
+      }
+
       depth = options.maxdepth.value;
 
       if ( x > depth || x < 1) { continue }
