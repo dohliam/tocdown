@@ -103,6 +103,7 @@ A demo of toc.js can be found [here](http://dohliam.github.io/tocdown/).
 ## Credits
 
 * [mui](https://github.com/muicss/mui) CSS by @amorey ([MIT](https://github.com/muicss/mui/blob/master/LICENSE.txt)), prototyped using [dropin-minimal-css](https://github.com/dohliam/dropin-minimal-css)
+* [github-corners](https://github.com/tholman/github-corners) by @tholman
 
 ## License
 
