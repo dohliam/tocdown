@@ -2,6 +2,7 @@
 
 Tocdown is a general purpose table of contents (TOC) generator that takes markdown as input. There is a command-line version written in Ruby and a Javascript version with identical functionality that can be used in a browser.
 
+<!-- TocDown Begin -->
 * [1 Rationale](#rationale)
 * [2 Usage](#usage)
   * [2.1 General guidelines](#general-guidelines)
@@ -14,6 +15,7 @@ Tocdown is a general purpose table of contents (TOC) generator that takes markdo
 * [3 To do](#to-do)
 * [4 Credits](#credits)
 * [5 License](#license)
+<!-- TocDown End -->
 
 ## Rationale
 
@@ -73,6 +75,7 @@ Currently, the following options are available:
 * `-m`, `--markdown`: _Output markdown instead of plain text_
 * `-t`, `--top-level`: _Include top-level heading (Heading 1 / Title)_
 * `-z`, `--zero`: _Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc._
+* `-r`, `--replace-in-file`: _Place the toc in the file it self. <!-- TocDown Begin --> and <!-- TocDown End --> are required to be present in the file._
 
 Options can be combined arbitrarily, so e.g., `./toc.rb -mbi` will produce a table of contents in markdown format with non-numbered headings and no indendation.
 

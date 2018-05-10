@@ -156,11 +156,11 @@ def write_file (toc, filename)
 
   new_text = File.readlines(filename).each.reduce("") do |t, line|
     t += line unless in_toc
-    if line =~ /\s*<!--\s*TocDown\s*Begin\s*-->/
+    if line =~ /^\s*<!--\s*TocDown\s*Begin\s*-->\s*$/
       in_toc = true                 
       missing_tocdown_begin = false 
     end
-    if line =~ /\s*<!--\s*TocDown\s*End\s*-->/
+    if line =~ /^\s*<!--\s*TocDown\s*End\s*-->\s*$/
       t  +=  toc + line
       missing_tocdown_end = false
       in_toc = false
