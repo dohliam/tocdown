@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 require 'optparse'
 require_relative 'libtoc.rb'
@@ -15,9 +15,12 @@ OptionParser.new do |opts|
   opts.on("-m", "--markdown", "Output markdown instead of plain text") { options[:markdown] = true }
   opts.on("-t", "--top-level", "Include top-level heading (Heading 1 / Title)") { options[:top_level] = true }
   opts.on("-z", "--zero", "Allow for zero heading (Chapter 0, e.g. Introduction, Preface etc.)") { options[:zero] = true }
+  opts.on("-r", "--replace-in-file", "Place the toc in the file it self. <!-- TocDown Begin --> and <!-- TocDown End --> are required to be present in the file.") { options[:replace] = true } 
 end.parse!
 
 filename = ARGV[0]
 
 text = validate_file(filename)
-puts md_to_toc(text, options)
+toc = md_to_toc(text, options)
+write_file(toc,filename) if options[:replace] == true
+puts toc
