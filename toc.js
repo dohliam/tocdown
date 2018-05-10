@@ -91,5 +91,5 @@ function toBase64() {
       b64 = window.btoa(json);
   }
   url = "https://jonschlinkert.github.io/remarkable/demo/#md64=" + b64;
-  window.location = url;
+  window.open(url);
 }
