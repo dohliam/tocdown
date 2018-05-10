@@ -171,8 +171,9 @@ def write_file (toc, filename)
   puts "ERROR: Missing <!-- TocDown Begin --> file will not be modified" if missing_tocdown_begin
   puts "ERROR: Missing <!-- TocDown End --> file will not be modified" if missing_tocdown_end
   unless missing_tocdown_end or missing_tocdown_begin
-    File.open("tmp_#{filename}","w"){ |file| file.write(new_text)}
-    File.rename("tmp_#{filename}",filename)
+    tmp_file = File.dirname(filename)+"/tmp_"+File.basename(filename)
+    File.open(tmp_file,"w"){ |file| file.write(new_text)}
+    File.rename(tmp_file,filename)
   end
 end
 
