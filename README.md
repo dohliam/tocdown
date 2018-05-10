@@ -159,7 +159,6 @@ All of the options in toc.js are also accessible using access keys:
 * Shortcut modifier key + `z`: **Allow for zero-level heading**
 
 ## To do
-* Replace [TOC] in file with Table of Contents
 * Option to output html
 * Add tests
 
