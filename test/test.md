@@ -4,6 +4,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, und
 
 ## Top-level topic (Heading 2)
 
+<!-- TocDown Begin -->
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
 
 ### First sub-topic (Heading 3)
