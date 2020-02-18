@@ -18,7 +18,7 @@ OptionParser.new do |opts|
   opts.on("-r", "--replace-in-file", "Place the toc in the file it self. <!-- TocDown Begin --> and <!-- TocDown End --> are required to be present in the file.") { options[:replace] = true } 
   opts.on("-s", "--scan-after-marker", "Only scan for headers after <!-- TocDown Begin --> markers") { options[:scanmarker] = true }
 end.parse!
-  
+
 filename = ARGV[0]
 
 text = validate_file(filename)

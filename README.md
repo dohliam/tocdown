@@ -75,8 +75,8 @@ Currently, the following options are available:
 * `-m`, `--markdown`: _Output markdown instead of plain text_
 * `-t`, `--top-level`: _Include top-level heading (Heading 1 / Title)_
 * `-z`, `--zero`: _Allow for zero heading or Chapter 0, e.g. Introduction, Preface etc._
-* `-r`, `--replace-in-file`: _Place the toc in the file it self. <!-- TocDown Begin --> and <!-- TocDown End --> are required to be present in the file._
-* `-s` : Skip headings until `TocDown Begin` marker is located.
+* `-r`, `--replace-in-file`: _Place the toc in the file it self. `<!-- TocDown Begin -->` and `<!-- TocDown End -->` are required to be present in the file._
+* `-s`, `--scan-after-marker`: Skip headings until `<!-- TocDown Begin -->` marker is located.
 
 Options can be combined arbitrarily, so e.g., `./toc.rb -mbi` will produce a table of contents in markdown format with non-numbered headings and no indendation.
 
@@ -163,8 +163,8 @@ All of the options in toc.js are also accessible using access keys:
 * Shortcut modifier key + `z`: **Allow for zero-level heading**
 
 ## To do
+
 * Option to output html
-* Add tests
 
 ## Credits
 
