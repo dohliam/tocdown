@@ -1,7 +1,9 @@
 # Title (Heading 1)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, minus, unde, quisquam, nisi soluta aliquid quibusdam ex eos est atque reprehenderit fugit facere in non quae modi officiis saepe numquam.
-
+```
+## Top-level topic that should not be counted
+```
 ## Top-level topic (Heading 2)
 
 <!-- TocDown Begin -->

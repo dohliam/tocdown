@@ -23,4 +23,13 @@ class LibTocTest < MiniTest::Unit::TestCase
         refute toc.include?("* Top-level topic (Heading 2)")
         assert toc.include?("* First sub-sub-sub-sub-topic (Heading 6)")
     end
+
+    def test_ignore_code
+        options = {}
+
+        toc = md_to_toc( File.read(__dir__ + '/test.md'), options )
+
+        refute toc.include?("Top-level topic that should not be counted")
+        assert toc.include?("Top-level topic")
+    end
 end
